@@ -686,7 +686,7 @@ public class StoreManagementSystem {
             }
             x += 2;
         }
-        // draw text
+        // draw text me
         g.setFont(new Font("Monospaced", Font.PLAIN, 12)); g.drawString(data, 10, h-4);
         g.dispose(); return bi;
     }
