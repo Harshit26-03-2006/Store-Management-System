@@ -700,3 +700,6 @@ public class StoreManagementSystem {
         customers.add(new Customer(nextCustomerId++, "Anita Verma", "9123456780"));
     }
 }
+
+
+//Store Management System 
