@@ -655,17 +655,14 @@ public class StoreManagementSystem {
             int conf = JOptionPane.showConfirmDialog(frame,"Delete user "+uname+"?","Confirm",JOptionPane.YES_NO_OPTION);
             if (conf==JOptionPane.YES_OPTION){ users.remove(uname); refreshUserModel(userModel); }
         });
-
         return p;
     }
-
     private void refreshUserModel(DefaultTableModel model){
         model.setRowCount(0);
         for (User u : users.values()){
             model.addRow(new Object[]{u.username, u.role});
         }
     }
-
     // -------------------- Utilities --------------------
     private void chooseAndSetBackground(){ JFileChooser fc = new JFileChooser(); if (fc.showOpenDialog(frame)==JFileChooser.APPROVE_OPTION){ File f = fc.getSelectedFile(); try{ backgroundImage = ImageIO.read(f); frame.repaint(); } catch(Exception ex){ JOptionPane.showMessageDialog(frame, "Failed to load image: "+ex.getMessage()); } } }
     private BufferedImage generateSimpleBarcode(String data){
@@ -700,6 +697,3 @@ public class StoreManagementSystem {
         customers.add(new Customer(nextCustomerId++, "Anita Verma", "9123456780"));
     }
 }
-
-
-//Store Management System 
